@@ -46,11 +46,11 @@ const Task = ({ giftLink }) => {
           </p>
         </div>
 
-        {/* <img
+        <img
           className={style.task__image}
           src={require(`../../assets/images/round_images/${footballers.items[index].roundImage}`)}
           alt="task"
-        /> */}
+        />
 
         <div className={style.task__task}>
           <h2>Раунд {index + 1}/16:</h2>
