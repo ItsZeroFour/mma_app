@@ -11,10 +11,10 @@ import Achives from "./screens/achives/Achives";
 
 function App() {
   const [giftLink, setGiftLink] = useState(
-    "https://af-ru2e2e.com/click?offer_id=125&partner_id=11177&landing_id=4012&utm_medium=affiliate&web_master_id={web_master_id}&partner_click_id={partner_click_id}&sub_1={sport24}&sub_2={spec}&sub_3={scout}&sub_4={promo}&sub_5={source_1}"
+    "https://af-ru2e2e.com/click?offer_id=125&partner_id=11177&landing_id=4019&utm_medium=affiliate&web_master_id={web_master_id}&partner_click_id={partner_click_id}&sub_1={sport24}&sub_2={spec}&sub_3={mmascout}&sub_4={promo}&sub_5={source_1}"
   );
   const [registerLink, setRegisterLink] = useState(
-    "https://af-ru2e2e.com/click?offer_id=125&partner_id=11177&landing_id=4019&utm_medium=affiliate&web_master_id={web_master_id}&partner_click_id={partner_click_id}&sub_1={sport24}&sub_2={spec}&sub_3={scout}&sub_4={promo}&sub_5={source_1}"
+    "https://af-ru2e2e.com/click?offer_id=125&partner_id=11177&landing_id=4019&utm_medium=affiliate&web_master_id={web_master_id}&partner_click_id={partner_click_id}&sub_1={sport24}&sub_2={spec}&sub_3={mmascout}&sub_4={promo}&sub_5={source_1}"
   );
 
   useEffect(() => {
@@ -97,7 +97,6 @@ function App() {
               <Achives giftLink={registerLink} registerLink={giftLink} />
             }
           />
-          
         </Routes>
       </div>
     </div>

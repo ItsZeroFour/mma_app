@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Header from "../../components/header/Header";
-import taskImg from "../../assets/images/task.png";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import footballers from "../../data/footballers.json";
 
@@ -53,7 +52,7 @@ const Task = ({ giftLink }) => {
         />
 
         <div className={style.task__task}>
-          <h2>Раунд {index + 1}/16:</h2>
+          <h2>Раунд {index + 1}/6:</h2>
           <p>{footballers.items[index].task}</p>
           {index === 15 ? (
             <p>
