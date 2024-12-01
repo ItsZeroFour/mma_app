@@ -201,18 +201,6 @@
   }
 }
 
-.card__sec {
-  &::before {
-    width: 111%;
-  }
-}
-
-.card__thrd {
-  &::before {
-    width: 104%;
-  }
-}
-
 .message {
   display: flex;
   flex-direction: column;
