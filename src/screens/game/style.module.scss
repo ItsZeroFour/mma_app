@@ -190,7 +190,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
-    width: 100%;
+    width: 110%;
     height: 100%;
 
     background: linear-gradient(180deg, rgba(232, 0, 36, 0) 50%, #e80024 100%);
@@ -198,6 +198,18 @@
     @media (max-width: 450px) {
       width: 115%;
     }
+  }
+}
+
+.card__sec {
+  &::before {
+    width: 100%;
+  }
+}
+
+.card__thrd {
+  &::before {
+    width: 100%;
   }
 }
 

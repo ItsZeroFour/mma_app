@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import Header from "../../components/header/Header";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import footballers from "../../data/footballers.json";
+import JsxParser from "react-jsx-parser";
 
 const Task = ({ giftLink }) => {
   const [searchParams] = useSearchParams();
@@ -39,9 +40,7 @@ const Task = ({ giftLink }) => {
           </p> */}
           <p>
             Ваша лига FFC (FONBET Fighting Championship) нуждается в
-            высококлассных бойцах, чтобы покончить с гегемонией UFC! Благодаря
-            титульному спонсору бюджет неограничен – можете переманить любую
-            звезду.
+            высококлассных бойцах!
           </p>
         </div>
 
@@ -52,8 +51,12 @@ const Task = ({ giftLink }) => {
         />
 
         <div className={style.task__task}>
+          {console.log(footballers.items[index]?.roundImage)}
           <h2>Раунд {index + 1}/6:</h2>
-          <p>{footballers.items[index].task}</p>
+          <p>
+            {footballers.items[index]?.taskText} <br />
+            {footballers.items[index].task}
+          </p>
           {index === 15 ? (
             <p>
               Наберите <span>5 очков</span> по итогам раунда, чтобы закончить

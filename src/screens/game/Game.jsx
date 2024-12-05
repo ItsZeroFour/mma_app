@@ -34,7 +34,8 @@ const achievementsData = [
   {
     id: 4,
     title: "Никогда не сдавайся",
-    description: "Ответь верно по 8 бойцам, которые ни разу не проигрывали досрочно",
+    description:
+      "Ответь верно по 8 бойцам, которые ни разу не проигрывали досрочно",
   },
   {
     id: 5,
@@ -463,7 +464,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioCorrect();
       }
-      setSwipeText("Этот игрок был вам не нужен");
+      setSwipeText("Этот боец был вам не нужен");
 
       if (contains(itemAchives, 1)) {
         if (!contains(achive1List, shuffledFootballers[currentIndex].iIndex)) {
@@ -549,7 +550,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioCorrect();
       }
-      setSwipeText("Вы приобрели нужного игрока!");
+      setSwipeText("Ты приобрел нужного игрока!");
 
       if (contains(itemAchives, 1)) {
         if (!contains(achive1List, shuffledFootballers[currentIndex].iIndex)) {
@@ -629,14 +630,14 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioUncorrect();
       }
-      setSwipeText("Этот игрок был вам нужен");
+      setSwipeText("Этот боец был вам нужен");
     } else {
       setIsCorrectChoose(false);
       setScore((prevScore) => prevScore - 1);
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioUncorrect();
       }
-      setSwipeText("Вы приобрели ненужного игрока!");
+      setSwipeText("Ты приобрел ненужного игрока!");
     }
 
     if (dir === "right") {
@@ -856,7 +857,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                           alt="achive"
                         />
                         <p>
-                          Вы получили ачивку <br /> "
+                          Ты получил ачивку <br /> "
                           {
                             achievementsData.filter(
                               ({ id }) => id === achives[currentMessageIndex].id
@@ -869,16 +870,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                       <h4>
                         Вам подарок от FONBET – <span>до 15 000 ₽</span>
                       </h4>
-                      <p>
-                        Предоставляется в виде бонусов (Фрибетов), подробнее в{" "}
-                        <Link
-                          style={{ textDecoration: "underline" }}
-                          to="https://fon.bet/pages/scout"
-                          target="_blank"
-                        >
-                          правилах игры.
-                        </Link>
-                      </p>
+                      <p>Предоставляется в виде бонусов (Фрибетов)</p>
 
                       <div className={style.game__achive__buttons}>
                         <button onClick={handleNextMessage}>
@@ -922,11 +914,6 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                         <div className={style.game__banner__cupon}>
                           <p>до 15 000 ₽*</p>
                         </div>
-
-                        <p>
-                          Пройдите игру до конца, чтобы принять участие в
-                          розыгрыше 100 000 ₽ фрибетами.
-                        </p>
 
                         <Link
                           className={style.game__banner__link_1}
@@ -977,17 +964,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                           Играть дальше
                         </button>
 
-                        <p>
-                          *Предоставляется в виде бонусов (Фрибетов), подробнее
-                          в{" "}
-                          <Link
-                            style={{ textDecoration: "underline" }}
-                            to="https://fon.bet/pages/scout"
-                            target="_blank"
-                          >
-                            правилах игры.
-                          </Link>
-                        </p>
+                        <p>*Предоставляется в виде бонусов (Фрибетов)</p>
                       </div>
                     </div>
                   ) : (
@@ -1154,8 +1131,8 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                                 index === 0 &&
                                 currentIndex === 0 &&
                                 style.card__animate
-                              } ${index === 3 && style.card__sec} ${
-                                index === 4 && style.card__thrd
+                              } ${index === 1 && style.card__sec} ${
+                                index === 3 && style.card__thrd
                               }`}
                               style={{
                                 willChange: "transform",
@@ -1257,25 +1234,25 @@ const Game = React.memo(({ giftLink, registerLink }) => {
               <div className={style.game__final}>
                 <div className={style.game__total}>
                   <h1>
-                    {index === 15 && score >= 5 ? (
+                    {index === 5 && score >= 5 ? (
                       <>Игра пройдена!</>
                     ) : (
                       <>
                         {currentChapter === 1
                           ? score >= 2
                             ? "Раунд пройден!"
-                            : "Вы проиграли :("
+                            : "Ты проиграл :("
                           : currentChapter === 2
                           ? score >= 3
                             ? "Раунд пройден!"
-                            : "Вы проиграли :("
+                            : "Ты проиграл :("
                           : currentChapter === 3
                           ? score >= 4
                             ? "Раунд пройден!"
-                            : "Вы проиграли :("
+                            : "Ты проиграл :("
                           : score >= 5
                           ? "Раунд пройден!"
-                          : "Вы проиграли :("}
+                          : "Ты проиграл :("}
                       </>
                     )}
                   </h1>
@@ -1303,11 +1280,11 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                     ? 4
                     : 5) ? (
                     <>
-                      Поздравляем, скаут! <br /> Вот кого из нужных игроков вы
-                      взяли в команду:
+                      Поздравляем, скаут! <br /> Вот кого из нужных игроков ты
+                      взял в команду:
                     </>
                   ) : (
-                    <>Вот кого из нужных игроков вы взяли в команду:</>
+                    <>Вот кого из нужных игроков ты взял в команду:</>
                   )}
                 </p>
 
@@ -1430,7 +1407,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                   ? 4
                   : 5) ? (
                   <>
-                    {index !== 15 && (
+                    {index !== 5 && (
                       <button
                         onClick={async () => {
                           if (window.ym) {
@@ -1475,16 +1452,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                   </Link>
                 )}
 
-                <p>
-                  *Предоставляется в виде бонусов (Фрибетов), подробнее в{" "}
-                  <Link
-                    style={{ textDecoration: "underline" }}
-                    to="https://fon.bet/pages/scout"
-                    target="_blank"
-                  >
-                    правилах игры.
-                  </Link>
-                </p>
+                <p>*Предоставляется в виде бонусов (Фрибетов)игры.</p>
               </div>
             }
           </React.Fragment>
