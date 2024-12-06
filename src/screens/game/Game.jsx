@@ -550,7 +550,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioCorrect();
       }
-      setSwipeText("Ты приобрел нужного игрока!");
+      setSwipeText("Ты приобрел нужного бойца!");
 
       if (contains(itemAchives, 1)) {
         if (!contains(achive1List, shuffledFootballers[currentIndex].iIndex)) {
@@ -637,7 +637,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioUncorrect();
       }
-      setSwipeText("Ты приобрел ненужного игрока!");
+      setSwipeText("Ты приобрел ненужного бойца!");
     }
 
     if (dir === "right") {
@@ -1280,11 +1280,11 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                     ? 4
                     : 5) ? (
                     <>
-                      Поздравляем, скаут! <br /> Вот кого из нужных игроков ты
+                      Поздравляем, скаут! <br /> Вот кого из нужных бойцов ты
                       взял в команду:
                     </>
                   ) : (
-                    <>Вот кого из нужных игроков ты взял в команду:</>
+                    <>Вот кого из нужных бойцов ты взял в команду:</>
                   )}
                 </p>
 
@@ -1337,7 +1337,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
 
                     <p>
                       Регистрируйтесь по ссылке, получите <br /> подарок до 15
-                      000 ₽ и примите участие <br /> в розыгрыше 100 000 ₽ !
+                      000 ₽
                     </p>
 
                     <Link
@@ -1374,10 +1374,10 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                       <p>до 15 000 ₽*</p>
                     </div>
 
-                    <p>
+                    {/* <p>
                       Пройдите раунд до конца, чтобы принять участие в розыгрыше{" "}
                       <span>100 000 ₽ фрибетами.</span>
-                    </p>
+                    </p> */}
 
                     <Link
                       className={style.game__banner__link_1}
