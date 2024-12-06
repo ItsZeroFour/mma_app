@@ -67,7 +67,7 @@
 }
 
 .game__cards__container {
-  width: 75%;
+  width: 100%;
   height: 100%;
   position: relative;
 
@@ -75,10 +75,10 @@
     content: "";
     position: absolute;
 
-    left: 10%;
+    left: 100%;
     margin-top: 150px;
 
-    width: 170%;
+    width: 10%;
     height: 100px;
 
     opacity: 0.7;
@@ -95,7 +95,7 @@
     left: 10%;
     margin-top: 150px;
 
-    width: 70%;
+    width: 100%;
     height: 100px;
 
     opacity: 0.7;
@@ -157,7 +157,7 @@
     border-radius: 15px;
 
     @media (max-width: 450px) {
-      width: 115%;
+      width: 80%;
       margin-top: 10px;
       height: auto;
     }
@@ -181,7 +181,7 @@
   h3 {
     position: absolute;
     top: 85%;
-    left: 5%;
+    left: 15%;
   }
 
   &::before {
@@ -199,7 +199,7 @@
     background: linear-gradient(180deg, rgba(232, 0, 36, 0) 50%, #e80024 100%);
 
     @media (max-width: 450px) {
-      width: 115%;
+      width: 80%;
       height: 100%;
     }
   }
@@ -464,7 +464,7 @@
   }
 
   @media (max-width: 450px) {
-    top: 80%;
+    top: 76%;
     width: 320px;
   }
 }
@@ -582,7 +582,7 @@
   border-radius: 10px;
   margin-top: 0px;
   text-align: center;
-  width: 90%;
+  width: 90% !important;
 
   display: flex;
   flex-direction: column;
@@ -730,7 +730,7 @@
   }
 
   .game__banner {
-    width: 120% !important;
+    width: 100% !important;
     margin-top: 40px;
 
     @media (max-width: 450px) and (max-height: 680px) {
@@ -767,7 +767,7 @@
 
     @media (max-width: 450px) {
       margin-bottom: 90px;
-      margin-top: auto;
+      margin-top: 40px;
     }
   }
 

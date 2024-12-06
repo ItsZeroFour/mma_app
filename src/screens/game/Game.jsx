@@ -234,7 +234,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
     localStorage.setItem("achive3List", JSON.stringify(achive3List));
 
     if (
-      achive3List.length >= 5 &&
+      achive3List.length >= 3 &&
       !localStorage.getItem("messageShownArray3")
     ) {
       localStorage.setItem("messageShownArray3", "true");
@@ -251,7 +251,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
     localStorage.setItem("achive4List", JSON.stringify(achive4List));
 
     if (
-      achive4List.length >= 5 &&
+      achive4List.length >= 8 &&
       !localStorage.getItem("messageShownArray4")
     ) {
       localStorage.setItem("messageShownArray4", "true");
@@ -302,7 +302,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
     localStorage.setItem("achive7List", JSON.stringify(achive7List));
 
     if (
-      achive7List.length >= 7 &&
+      achive7List.length >= 10 &&
       !localStorage.getItem("messageShownArray7")
     ) {
       localStorage.setItem("messageShownArray7", "true");
@@ -319,7 +319,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
     localStorage.setItem("achive8List", JSON.stringify(achive8List));
 
     if (
-      achive8List.length >= 5 &&
+      achive8List.length >= 15 &&
       !localStorage.getItem("messageShownArray8")
     ) {
       localStorage.setItem("messageShownArray8", "true");
@@ -1452,7 +1452,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                   </Link>
                 )}
 
-                <p>*Предоставляется в виде бонусов (Фрибетов)игры.</p>
+                <p>*Предоставляется в виде бонусов (Фрибетов)</p>
               </div>
             }
           </React.Fragment>

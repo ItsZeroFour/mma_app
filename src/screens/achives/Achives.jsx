@@ -22,7 +22,8 @@ const achievementsData = [
   {
     id: 4,
     title: "Никогда не сдавайся",
-    description: "Ответь верно по 8 бойцам, которые ни разу не проигрывали досрочно",
+    description:
+      "Ответь верно по 8 бойцам, которые ни разу не проигрывали досрочно",
   },
   {
     id: 5,
@@ -70,7 +71,26 @@ const Achives = ({ registerLink, giftLink }) => {
         achiveList = null;
       }
 
-      const minLength = index === 6 ? 7 : 5;
+      let minLength;
+
+      // Set minLength based on achievement id
+      switch (index + 1) {
+        case 3:
+          minLength = 3;
+          break;
+        case 4:
+          minLength = 8;
+          break;
+        case 7:
+          minLength = 10;
+          break;
+        case 8:
+          minLength = 15;
+          break;
+        default:
+          minLength = 5;
+      }
+
       return (
         achiveList &&
         Array.isArray(achiveList) &&

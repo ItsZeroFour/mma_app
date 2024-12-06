@@ -38,10 +38,8 @@ const Task = ({ giftLink }) => {
               ? "Переезд в крепкий европейский клуб"
               : "Руководство трансферами в европейском ТОП-клубе"}
           </p> */}
-          <p>
-            Ваша лига FFC (FONBET Fighting Championship) нуждается в
-            высококлассных бойцах!
-          </p>
+          <p>{footballers.items[index].taskText}</p>
+          {console.log(footballers.items[index].taskText)}
         </div>
 
         <img
@@ -51,16 +49,11 @@ const Task = ({ giftLink }) => {
         />
 
         <div className={style.task__task}>
-          {console.log(footballers.items[index]?.roundImage)}
           <h2>Раунд {index + 1}/6:</h2>
-          <p>
-            {footballers.items[index]?.taskText} <br />
-            {footballers.items[index].task}
-          </p>
+          <p>{footballers.items[index].task}</p>
           {index === 15 ? (
             <p>
-              Набери <span>5 очков</span> по итогам раунда, чтобы закончить
-              игру
+              Набери <span>5 очков</span> по итогам раунда, чтобы закончить игру
             </p>
           ) : (
             <p>

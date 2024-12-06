@@ -4,6 +4,7 @@
       "index": 1,
       "round": "Раунд 1",
       "task": "Выбери действующих чемпионов UFC",
+      "taskText": "Ваша лига FFC (FONBET Fighting Championship) нуждается в высококлассных бойцах!",
       "roundImage": "1.png",
       "footballers": [
         {
