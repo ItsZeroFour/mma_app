@@ -464,7 +464,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioCorrect();
       }
-      setSwipeText("Этот боец был вам не нужен");
+      setSwipeText("Этот боец был тебе не нужен");
 
       if (contains(itemAchives, 1)) {
         if (!contains(achive1List, shuffledFootballers[currentIndex].iIndex)) {
@@ -630,7 +630,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
       if (JSON.parse(localStorage.getItem("offVoice")) === false) {
         playAudioUncorrect();
       }
-      setSwipeText("Этот боец был вам нужен");
+      setSwipeText("Этот боец был тебе нужен");
     } else {
       setIsCorrectChoose(false);
       setScore((prevScore) => prevScore - 1);
@@ -773,7 +773,6 @@ const Game = React.memo(({ giftLink, registerLink }) => {
 
     if (!(achives.length > 0 && currentMessageIndex < achives.length)) {
       checkIsEnd();
-      console.log(2);
     }
   }, [achives, currentMessageIndex]);
 
@@ -814,9 +813,11 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                 ) && (
                   <React.Fragment>
                     {!(
-                      achives.length > 0 && currentMessageIndex < achives.length
+                      !showMessage &&
+                      achives.length > 0 &&
+                      currentMessageIndex < achives.length
                     ) && (
-                      <React.Fragment>
+                      <div className={style.game__top}>
                         <div className={style.game__task}>
                           <div className={style.game__task__index}>
                             {item.index}
@@ -840,7 +841,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
 
                           <p>Очки: {score}</p>
                         </div>
-                      </React.Fragment>
+                      </div>
                     )}
                   </React.Fragment>
                 )}
