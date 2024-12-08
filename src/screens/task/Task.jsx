@@ -74,6 +74,11 @@ const Task = ({ giftLink }) => {
 
         <Link
           className={style.task__link}
+          onClick={async () => {
+            if (window.ym && index === 0) {
+              await window.ym(99068262, "reachGoal", "start----interaction");
+            }
+          }}
           to={index === 0 ? `/game?index=${index}` : `/game?index=${index}`}
         >
           Начать

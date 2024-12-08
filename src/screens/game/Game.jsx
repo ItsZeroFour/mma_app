@@ -197,6 +197,12 @@ const Game = React.memo(({ giftLink, registerLink }) => {
   }, []);
 
   useEffect(() => {
+    if (window.ym && index) {
+      window.ym(99068262, "reachGoal", `level--${index + 1}---interaction`);
+    }
+  }, [index]);
+
+  useEffect(() => {
     localStorage.setItem("achive1List", JSON.stringify(achive1List));
 
     if (
@@ -353,7 +359,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
 
   useEffect(() => {
     if (index === 0 && window.ym) {
-      window.ym(98751165, "reachGoal", "start----interaction");
+      window.ym(99068262, "reachGoal", "start----interaction");
     }
   }, []);
 
@@ -882,9 +888,9 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                           onClick={async () => {
                             if (window.ym) {
                               await window.ym(
-                                98751165,
+                                99068262,
                                 "reachGoal",
-                                `achivka_-${achives[currentMessageIndex].id}---conversion`
+                                `achivka_-${achives[currentMessageIndex].id}---interaction`
                               );
                             }
                           }}
@@ -921,9 +927,9 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                           onClick={async () => {
                             if (window.ym) {
                               await window.ym(
-                                98751165,
+                                99068262,
                                 "reachGoal",
-                                `offer--${
+                                `offer_-${
                                   index === 0
                                     ? rightSwipeCount === 1
                                       ? 1
@@ -945,7 +951,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                           onClick={async () => {
                             if (window.ym) {
                               await window.ym(
-                                98751165,
+                                99068262,
                                 "reachGoal",
                                 `offer--${
                                   index === 0
@@ -1346,9 +1352,9 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                       onClick={() => {
                         if (window.ym) {
                           window.ym(
-                            98751165,
+                            99068262,
                             "reachGoal",
-                            `final--${index + 1}---conversion`
+                            `final_-${index + 1}---conversion`
                           );
                         }
                       }}
@@ -1385,7 +1391,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                       onClick={async () => {
                         if (window.ym) {
                           await window.ym(
-                            98751165,
+                            99068262,
                             "reachGoal",
                             "offer--10---conversion"
                           );
@@ -1413,7 +1419,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                         onClick={async () => {
                           if (window.ym) {
                             await window.ym(
-                              98751165,
+                              99068262,
                               "reachGoal",
                               `final--${index + 1}--play--interaction`
                             );
@@ -1440,9 +1446,9 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                     onClick={async () => {
                       if (window.ym) {
                         await window.ym(
-                          98751165,
+                          99068262,
                           "reachGoal",
-                          "died-play----interaction"
+                          "died_play----interaction"
                         );
                       }
 
