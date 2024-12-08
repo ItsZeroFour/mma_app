@@ -1235,7 +1235,7 @@ const Game = React.memo(({ giftLink, registerLink }) => {
               <div className={style.game__final}>
                 <div className={style.game__total}>
                   <h1>
-                    {index === 5 && score >= 5 ? (
+                    {index === 5 && score >= 3 ? (
                       <>Игра пройдена!</>
                     ) : (
                       <>
