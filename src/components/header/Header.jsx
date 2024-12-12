@@ -101,7 +101,15 @@ const Header = ({
 
   return (
     <header className={style.head}>
-      <Link to={giftLink} target="_blank">
+      <Link
+        onClick={async () => {
+          if (window.ym) {
+            await window.ym(99068262, "reachGoal", "podarok----conversion");
+          }
+        }}
+        to={giftLink}
+        target="_blank"
+      >
         <img src={logo} alt="logo" />
       </Link>
 
@@ -121,9 +129,9 @@ const Header = ({
         )}
 
         <Link
-          onClick={() => {
+          onClick={async () => {
             if (window.ym) {
-              window.ym(98751165, "reachGoal", "podarok----conversion");
+              await window.ym(98751165, "reachGoal", "podarok----conversion");
             }
           }}
           to={giftLink}

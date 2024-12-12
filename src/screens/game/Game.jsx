@@ -953,13 +953,13 @@ const Game = React.memo(({ giftLink, registerLink }) => {
                               await window.ym(
                                 99068262,
                                 "reachGoal",
-                                `offer--${
+                                `offer_-${
                                   index === 0
                                     ? rightSwipeCount === 1
                                       ? 1
                                       : rightSwipeCount === 3 && 2
                                     : index
-                                }--play--interaction`
+                                }-_play--interaction`
                               );
                             }
 
